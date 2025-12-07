@@ -1,20 +1,24 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 public class QuizGame {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         int choice;
         do {
-            System.out.println("\n===== QUIZ GAME MENU =====");
+            System.out.println("\n===========QUIZ GAME MENU =======");
+            System.out.println("=====Welcome to CUI Quiz Game====");
             System.out.println("1 - Admin Login");
             System.out.println("2 - Player Login");
+            System.out.println("0 - Exit");
             System.out.println("0 - Exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
 
             switch(choice) {
-                case 1 : adminLogin();
-                case 2 : playerLogin();
-                case 0 : System.out.println("Exiting program. Goodbye!");
+                case 1 : adminLogin();break;
+                case 2 : playerLogin();break;
+                case 0 : System.out.println("Exiting program. Goodbye!");break;
                 default : System.out.println("Invalid choice!");
             }
         } while(choice != 0);
@@ -41,6 +45,7 @@ public class QuizGame {
         int choice;
         do {
             System.out.println("\n Admin Menu:");
+            System.out.println("===Welcome to Admin Menu===");
             System.out.println("1. Add Questions");
             System.out.println("2. Edit Questions");
             System.out.println("3. View Questions");
@@ -50,16 +55,72 @@ public class QuizGame {
             choice = sc.nextInt();
 
             switch(choice) {
-                case 1 -> addQuestions();
-                case 2 -> viewQuestions();
-                case 3 -> editQuestions();
-                case 4 -> viewMarks();
-                case 0 -> System.out.println("Logging Out");
-                default -> System.out.println("Invalid choice!");
+                case 1 : addQuestions();break;
+                case 2 : editQuestions();break;
+                case 3 : viewQuestions();break;
+                case 4 : viewMarks();break;
+                case 0 : System.out.println("Logging Out");break;
+                default : System.out.println("Invalid choice!");
             }
            }   while(choice != 0);
     }
-public static void addQuestions(){}
+public static void addQuestions(){
+    int choice;
+        do {
+            System.out.println("\n Select Subject:");
+            System.out.println("1. Biology");
+            System.out.println("2. Chemistry");
+            System.out.println("3. Physics");
+            System.out.println("4. English");
+            System.out.println("5. Logical Reasoning");
+            System.out.println("0. Back");
+            System.out.print("Choice: ");
+            choice = sc.nextInt();
+
+            switch(choice) {
+                case 1 : addQuestionToFile("Biology.txt");break;
+                case 2 : addQuestionToFile("Chemistry.txt");break;
+                case 3 : addQuestionToFile("Physics.txt");break;
+                case 4 : addQuestionToFile("English.txt");break;
+                case 5 : addQuestionToFile("LogicalReasoning.txt");break;
+                case 0 : System.out.println("Back ");break;
+                default : System.out.println("Invalid choice!");
+            }
+           }   while(choice != 0);
+}
+ public static void addQuestionToFile(String fileName) {
+    try{
+        sc.nextLine();
+
+        System.out.println("Enter Question: ");
+        String question = sc.nextLine();
+
+        System.out.println("Enter first option: ");
+        String optA = sc.nextLine();
+
+        System.out.println("Enter second option: ");
+        String optB = sc.nextLine();
+
+        System.out.println("Enter third option: ");
+        String optC = sc.nextLine();
+
+        System.out.println("Enter fourth option: ");
+        String optD = sc.nextLine();
+
+        System.out.println("Enter Correct option(A-D): ");
+        String Ans = sc.nextLine().toUpperCase();
+
+        FileWriter Added = new FileWriter(fileName, true);
+            Added.write(question + "," + optA + "," + optB + "," + optC + "," + optD + "," + Ans + "\n");
+            Added.close();
+
+            System.out.println("Question added successfully to " + Added + "!");
+
+
+        } catch (IOException e) {
+            System.out.println("There is some error!!!");
+        }
+    }
 
 public static void editQuestions(){}
 
