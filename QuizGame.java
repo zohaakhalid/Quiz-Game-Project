@@ -11,7 +11,6 @@ public class QuizGame {
             System.out.println("1 - Admin Login");
             System.out.println("2 - Player Login");
             System.out.println("0 - Exit");
-            System.out.println("0 - Exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
 
