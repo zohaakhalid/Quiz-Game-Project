@@ -250,7 +250,7 @@ public static void viewQuestions(){
             System.out.println("   C. " + parts[3]);
             System.out.println("   D. " + parts[4]);
             System.out.println("   Answer: " + parts[5]);
-            System.out.println(); // blank line for spacing
+            System.out.println(); 
             qNo++;
        
     }
