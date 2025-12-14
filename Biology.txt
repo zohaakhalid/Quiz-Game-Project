@@ -7,7 +7,7 @@ Blood is a type of,Tissue,Organ,Cell,System,A
 Human heart has,2 chambers,3 chambers,4 chambers,5 chambers,C
 Largest organ of human body is,Liver,Skin,Brain,Heart,B
 Enzymes are,Lipids,Carbohydrates,Proteins,Vitamins,C
-Genetics is the study of,Cells,Tissues,Heredity,Evolution,C
+study of internal structure is called,physiology,anatomy,chemistry,physics,B
 Functional unit of kidney is,Neuron,Nephron,Alveolus,Villus,B
 CO2 is transported by,rbc,lungs,air,food,B
 Universal donor blood group is,A,B,AB,O,D

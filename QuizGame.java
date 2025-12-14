@@ -2,12 +2,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.util.InputMismatchException;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class QuizGame {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        int choice;
+        int choice = -1;
         do {
+            try{
             System.out.println("\n===========QUIZ GAME MENU =======");
             System.out.println("=====Welcome to CUI Quiz Game====");
             System.out.println("1 - Admin Login");
@@ -21,6 +24,15 @@ public class QuizGame {
                 case 2 : playerLogin();break;
                 case 0 : System.out.println("Exiting program. Goodbye!");break;
                 default : System.out.println("Invalid choice!");
+            }
+            }catch(InputMismatchException e){
+                System.out.println("Invalid input! Please enter a number.");
+                sc.nextLine();
+                choice = -1;
+            }catch(Exception e){
+                System.out.println("Unexpexted error: " + e);
+                sc.nextLine();
+                choice = -1;
             }
         } while(choice != 0);
     }
@@ -45,6 +57,7 @@ public class QuizGame {
     public static void adminMenu() {
         int choice;
         do {
+            try{
             System.out.println("\n Admin Menu:");
             System.out.println("===Welcome to Admin Menu===");
             System.out.println("1. Add Questions");
@@ -63,7 +76,16 @@ public class QuizGame {
                 case 0 : System.out.println("Logging Out");break;
                 default : System.out.println("Invalid choice!");
             }
-           }   while(choice != 0);
+           }catch(InputMismatchException e){
+              System.out.println("Invalid input! Please enter a number.");
+              sc.nextLine();
+              choice = -1;
+           } catch(Exception e){
+               System.out.println("Unexpected error in Admin Menu.");
+               sc.nextLine();
+               choice = -1;
+           } 
+         } while(choice != 0);
     }
 public static void addQuestions(){
     int choice;
@@ -115,11 +137,13 @@ public static void addQuestions(){
             Added.write(question + "," + optA + "," + optB + "," + optC + "," + optD + "," + Ans + "\n");
             Added.close();
 
-            System.out.println("Question added successfully to " + Added + "!");
+            System.out.println("Question added successfully to " + fileName + "!");
 
 
         } catch (IOException e) {
             System.out.println("There is some error!!!");
+        }catch(Exception e){
+            System.out.println("Unexpected error.");
         }
     }
 
@@ -205,8 +229,14 @@ public static void editQuestions(){
 
         System.out.println("Question updated successfully!");
 
-    } catch (IOException e) {
+    }catch(FileNotFoundException e){
+        System.out.println("File not found.");
+    }catch(ArrayIndexOutOfBoundsException e){
+        System.out.println("Invalid question number.");
+    }catch (IOException e) {
         System.out.println("Error editing question!");
+    }catch(Exception e){
+        System.out.println("Unexpected error.");
     }
 }
 
@@ -222,6 +252,7 @@ public static void viewQuestions(){
         System.out.println("3. Physics");
         System.out.println("4. English");
         System.out.println("5. Logical Reasoning");
+        System.out.println("0. Back");
         choice = sc.nextInt();
 
         switch (choice){
@@ -243,27 +274,53 @@ public static void viewQuestions(){
         System.out.println("\n----Questions----\n");
 
         while((line = view.readLine()) != null){
-            String[] parts = line.split(",");
-            System.out.println("Q" + qNo + ". " + parts[0]);
-            System.out.println("   A. " + parts[1]);
-            System.out.println("   B. " + parts[2]);
-            System.out.println("   C. " + parts[3]);
-            System.out.println("   D. " + parts[4]);
-            System.out.println("   Answer: " + parts[5]);
+            String[] index = line.split(",");
+            System.out.println("Q" + qNo + ". " + index[0]);
+            System.out.println("   A. " + index[1]);
+            System.out.println("   B. " + index[2]);
+            System.out.println("   C. " + index[3]);
+            System.out.println("   D. " + index[4]);
+            System.out.println("   Answer: " + index[5]);
             System.out.println(); 
-            qNo++;
-       
+            qNo++;      
     }
     view.close();
-    }
-    catch(IOException e){
+    }catch(FileNotFoundException e){
+        System.out.println("Question file not found.");
+    }catch(ArrayIndexOutOfBoundsException e){
+        System.out.println("Invalid question format.");
+    }catch(IOException e){
         System.out.println("Error Reading file");
+    }catch(Exception e){
+        System.out.println("Unexpected error.");
+    }
+}while(true);
+}
+   
+public static void viewMarks(){
+    try{
+        BufferedReader marks = new BufferedReader(new FileReader("Marks.txt"));
+        String line;
+
+        System.out.println("\n----PLAYER MARKS----\n");
+
+        while((line = marks.readLine()) != null){
+           String[] index = line.split(",");
+           System.out.println("Player: " + index[0]);
+           System.out.println("Marks: " + index[1]);
+           System.out.println("----------------------");
+       }
+       marks.close();
+    }catch(FileNotFoundException e){
+        System.out.println("Marks file not found.");
+    }catch(ArrayIndexOutOfBoundsException e){
+        System.out.println("Marks file format error");
+    }catch(IOException e){
+        System.out.println("Error reading file.");
+    }catch(Exception e){
+        System.out.println("Unexpected error.");
     }
 }
-    while(true);
-}
-
-public static void viewMarks(){}
     
     //Player login
       public static void playerLogin(){
