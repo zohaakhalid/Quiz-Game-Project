@@ -69,7 +69,7 @@ public class QuizGame {
         System.out.println("Login failed. Try Again!");
     }
 }
-
+    //Admin Menu
     public static void adminMenu() {
         int choice;
         do {
@@ -103,6 +103,7 @@ public class QuizGame {
            } 
          } while(choice != 0);
     }
+    //Add Questions
 public static void addQuestions(){
     int choice;
         do {
@@ -148,6 +149,10 @@ public static void addQuestions(){
 
         System.out.println("Enter Correct option(A-D): ");
         String Ans = sc.nextLine().toUpperCase();
+        while(!Ans.matches("[A-D]")) {
+           System.out.println("Invalid input! Enter A, B, C, or D:");
+           Ans = sc.nextLine().toUpperCase();
+        } 
 
         FileWriter Added = new FileWriter(fileName, true);
             Added.write(question + "," + optA + "," + optB + "," + optC + "," + optD + "," + Ans + "\n");
@@ -162,7 +167,7 @@ public static void addQuestions(){
             System.out.println("Unexpected error.");
         }
     }
-
+   //Edit Questions
 public static void editQuestions(){
     int choice;
     String fileName = "";
@@ -256,7 +261,7 @@ public static void editQuestions(){
     }
 }
 
-
+   //View Questions
 public static void viewQuestions(){
     int choice;
            String fileName = "";
@@ -312,7 +317,7 @@ public static void viewQuestions(){
     }
 }while(true);
 }
-   
+   // vIEW Score
 public static void viewMarks(){
     try{
         BufferedReader marks = new BufferedReader(new FileReader("Marks.txt"));
