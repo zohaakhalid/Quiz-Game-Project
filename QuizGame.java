@@ -1,9 +1,9 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.FileReader;
-import java.io.BufferedReader;
 import java.util.InputMismatchException;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class QuizGame {
     static Scanner sc = new Scanner(System.in);
@@ -45,15 +45,31 @@ public class QuizGame {
         System.out.println("Enter password: ");
         String password = sc.next();
 
-        System.out.println("You entered Username: " + username + " | Password: " + password);
+        boolean loginSuccess = false;
 
-        if(username.equals("admin") && password.equals("1234")){
-            System.out.println("Login Successful!");
-            adminMenu();}
-        else{
-            System.out.println("Login failed. Try Again!");
+        try {
+            BufferedReader key = new BufferedReader(new FileReader("admin.txt"));
+            String line;
+            
+            while((line = key.readLine()) != null){
+                String[] index = line.split(":");
+                if(index[0].equals(username) && index[1].equals(password)){
+                    loginSuccess = true;
+                    break;
+                }
+            } 
+            key.close();
+        } catch (Exception e) {
+            System.out.println("Error reading file!");
         }
+         if(loginSuccess){
+        System.out.println("Login Successful!");
+        adminMenu();
+    } else {
+        System.out.println("Login failed. Try Again!");
     }
+}
+
     public static void adminMenu() {
         int choice;
         do {
