@@ -1,0 +1,20 @@
+Atomic number represents number of,Neutrons,Protons,Electrons,Nucleons,B
+pH of pure water is,5,6,7,8,C
+NaCl is an,Acid,Base,Salt,Metal,C
+Lightest element is,Oxygen,Helium,Hydrogen,Nitrogen,C
+HCl is a,Weak acid,Strong acid,Weak base,Salt,B
+Chemical formula of water is,H2O,H2O2,HO,H2,A
+Gas used in photosynthesis is,Oxygen,Nitrogen,Carbon dioxide,Hydrogen,C
+Rusting is an example of,Reduction,Oxidation,Neutralization,Hydrolysis,B
+Which is an alkali,NaOH,HCl,H2SO4,CO2,A
+Atomic mass is measured in,kg,grams,amu,mole,C
+Avogadro number is,6.02x10^23,3.01x10^23,1.6x10^-19,9.8,A
+Bond that shares electrons is,Ionic,Covalent,Metallic,Hydrogen,B
+Noble gases are,Reactive,Inert,Metals,Acids,B
+Acid in vinegar is,Formic,Citric,Acetic,Lactic,C
+Element with symbol K is,Sodium,Potassium,Calcium,Krypton,B
+Periodic table was given by,Dalton,Bohr,Mendeleev,Rutherford1,C
+Which is a non metal,Iron,Copper,Sulphur,Zinc,C
+Bases turn litmus,Red,Blue,Green,Yellow,B
+CO2 is an,Acidic oxide,Basic oxide,Neutral oxide,Salt,A
+State with fixed shape is,Liquid,Gas,Solid,Plasma,C

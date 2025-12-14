@@ -1,0 +1,20 @@
+The basic unit of life is,Tissue,Organ,Cell,System,C
+Mitochondria are responsible for,Protein synthesis,Respiration,Photosynthesis,Digestion,B
+RNA stands for,ribonucleic acid,deoxyribonucleic acid,acis,base,A
+Photosynthesis occurs in,Mitochondria,Chloroplast,Ribosome,Nucleus,B
+The powerhouse of the cell is,Nucleus,Ribosome,Mitochondria,Golgi body,C
+Blood is a type of,Tissue,Organ,Cell,System,A
+Human heart has,2 chambers,3 chambers,4 chambers,5 chambers,C
+Largest organ of human body is,Liver,Skin,Brain,Heart,B
+Enzymes are,Lipids,Carbohydrates,Proteins,Vitamins,C
+Genetics is the study of,Cells,Tissues,Heredity,Evolution,C
+Functional unit of kidney is,Neuron,Nephron,Alveolus,Villus,B
+CO2 is transported by,rbc,lungs,air,food,B
+Universal donor blood group is,A,B,AB,O,D
+Vitamin made in skin is,A,B,C,D,D
+Plants breathe through,Lenticels,Stomata,Roots,Leaves,B
+Human chromosome number is,23,44,46,48,C
+Amoeba moves by,Cilia,Flagella,Pseudopodia,Legs,C
+Organ that detoxifies blood is,Kidney,Liver,Heart,Lungs,B
+Study of plants is called,Zoology,Botany,Ecology,Anatomy,B
+Ribosomes are made of,Protein only,RNA only,Protein and RNA,DNA,C

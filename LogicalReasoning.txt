@@ -1,0 +1,20 @@
+2 4 6 8 ?,9,10,11,12,B
+Odd one out is,Apple,Banana,Mango,Carrot,D
+1 4 9 16 ?,20,24,25,30,C
+Day after Monday is,Sunday,Tuesday,Wednesday,Friday,B
+All cats are animals means cats are,Plants,Birds,Animals,Fish,C
+10 x 0 equals,0,10,1,100,A
+Odd one out is,Pen,Pencil,Eraser,Book,D
+3 6 9 ? 15,10,11,12,13,C
+If today is Friday tomorrow is,Thursday,Saturday,Sunday,Monday,B
+5 squared equals,10,20,25,30,C
+Smallest number is,0.5,0.05,0.005,0.0005,D
+Odd shape is,Circle,Square,Triangle,Sphere,D
+One dozen equals,10,11,12,15,C
+Opposite of north is,East,West,South,Up,C
+A C E ?,F,G,H,I,B
+15 divided by 3 is,3,4,5,6,C
+2 6 18 ?,24,36,54,72,C
+Heavier object is,Cotton,Iron,Paper,Feather,B
+Mirror of 12 is,21,12,22,11,A
+5 + 3 equals,6,7,8,9,C

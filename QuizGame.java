@@ -1,5 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.FileReader;
+import java.io.BufferedReader;
 import java.util.Scanner;
 public class QuizGame {
     static Scanner sc = new Scanner(System.in);
@@ -121,9 +123,145 @@ public static void addQuestions(){
         }
     }
 
-public static void editQuestions(){}
+public static void editQuestions(){
+    int choice;
+    String fileName = "";
 
-public static void viewQuestions(){}
+    System.out.println("\nSelect Subject to Edit Questions:");
+    System.out.println("1. Biology");
+    System.out.println("2. Chemistry");
+    System.out.println("3. Physics");
+    System.out.println("4. English");
+    System.out.println("5. Logical Reasoning");
+    System.out.print("Choice: ");
+    choice = sc.nextInt();
+    sc.nextLine();
+
+    switch (choice) {
+        case 1: fileName = "Biology.txt"; break;
+        case 2: fileName = "Chemistry.txt"; break;
+        case 3: fileName = "Physics.txt"; break;
+        case 4: fileName = "English.txt"; break;
+        case 5: fileName = "LogicalReasoning.txt"; break;
+        default:
+            System.out.println("Invalid choice!");
+            return;
+    }
+
+    try {
+        String[] questions = new String[100];
+        int count = 0;
+
+        BufferedReader read = new BufferedReader(new FileReader(fileName));
+        String line;
+
+        while ((line = read.readLine()) != null) {
+            questions[count] = line;
+            count++;
+        }
+        read.close();
+
+        System.out.println("\nQuestions:");
+        for (int i = 0; i < count; i++) {
+            String[] parts = questions[i].split(",");
+            System.out.println((i + 1) + ". " + parts[0]);
+        }
+
+        System.out.print("\nEnter question number to edit: ");
+        int qNo = sc.nextInt();
+        sc.nextLine();
+
+        if (qNo < 1 || qNo > count) {
+            System.out.println("Invalid question number!");
+            return;
+        }
+
+        System.out.println("Enter new question:");
+        String question = sc.nextLine();
+
+        System.out.println("Enter option A:");
+        String optA = sc.nextLine();
+
+        System.out.println("Enter option B:");
+        String optB = sc.nextLine();
+
+        System.out.println("Enter option C:");
+        String optC = sc.nextLine();
+
+        System.out.println("Enter option D:");
+        String optD = sc.nextLine();
+
+        System.out.println("Enter correct option (A-D):");
+        String ans = sc.nextLine().toUpperCase();
+
+        questions[qNo - 1] = question + "," + optA + "," + optB + "," + optC + "," + optD + "," + ans;
+
+
+        FileWriter writer = new FileWriter(fileName);
+        for (int i = 0; i < count; i++) {
+            writer.write(questions[i] + "\n");
+        }
+        writer.close();
+
+        System.out.println("Question updated successfully!");
+
+    } catch (IOException e) {
+        System.out.println("Error editing question!");
+    }
+}
+
+
+public static void viewQuestions(){
+    int choice;
+           String fileName = "";
+
+    do{
+        System.out.println("\nSelect Subject: ");
+        System.out.println("1. Biology");
+        System.out.println("2. Chemistry");
+        System.out.println("3. Physics");
+        System.out.println("4. English");
+        System.out.println("5. Logical Reasoning");
+        choice = sc.nextInt();
+
+        switch (choice){
+            case 1 : fileName = "Biology.txt"; break;
+            case 2 : fileName = "Chemistry.txt"; break;
+            case 3 : fileName = "Physics.txt"; break;
+            case 4 : fileName = "English.txt"; break;
+            case 5 : fileName = "LogicalReasoning.txt"; break;
+            case 0 : return;
+            default:
+                System.out.println("Invalid choice!");
+                continue;
+        }
+    try{
+        BufferedReader view = new BufferedReader(new FileReader(fileName));
+        String line;
+        int qNo = 1;
+
+        System.out.println("\n----Questions----\n");
+
+        while((line = view.readLine()) != null){
+            String[] parts = line.split(",");
+            System.out.println("Q" + qNo + ". " + parts[0]);
+            System.out.println("   A. " + parts[1]);
+            System.out.println("   B. " + parts[2]);
+            System.out.println("   C. " + parts[3]);
+            System.out.println("   D. " + parts[4]);
+            System.out.println("   Answer: " + parts[5]);
+            System.out.println(); // blank line for spacing
+            qNo++;
+       
+    }
+    view.close();
+    }
+    catch(IOException e){
+        System.out.println("Error Reading file");
+    }
+}
+    while(true);
+}
 
 public static void viewMarks(){}
     

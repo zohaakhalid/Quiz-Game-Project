@@ -1,0 +1,20 @@
+SI unit of force is,Joule,Newton,Watt,Pascal,B
+Speed is distance divided by,Time,Force,Mass,Velocity,A
+Unit of electric current is,Volt,Ampere,Ohm,Watt,B
+Acceleration is change in,Speed,Velocity,Distance,Force,B
+Force equals mass multiplied by,Speed,Velocity,Acceleration,Energy,C
+SI unit of work is,Newton,Watt,Joule,Pascal,C
+Which quantity has magnitude only,Velocity,Acceleration,Scalar,Vector,C
+Earth attracts objects due to,Magnetism,Friction,Gravity,Pressure,C
+Unit of power is,Joule,Newton,Watt,Volt,C
+Speed of light is approximately,3x10^8 m/s,3x10^6 m/s,3x10^5 m/s,3x10^3 m/s,A
+Instrument to measure current is,Voltmeter,Ammeter,Galvanometer,Thermometer,B
+Unit of pressure is,Newton,Joule,Pascal,Watt,C
+Energy stored in motion is,Kinetic,Potential,Heat,Sound,A
+SI unit of frequency is,Hertz,Newton,Joule,Watt,A
+Sound needs which medium,Vacuum,Air,Any medium,None,C
+Mirror used in vehicles is,Plane,Convex,Concave,Cylindrical,B
+Which wave is electromagnetic,Sound,Water,Light,Seismic,C
+Unit of resistance is,Volt,Ampere,Ohm,Watt,C
+Heat flows from,Cold to hot,Hot to cold,Equal temperature,None,B
+Time period of pendulum depends on,Mass,Length,Amplitude,Density,B

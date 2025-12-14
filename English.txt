@@ -1,0 +1,20 @@
+Synonym of happy is,Sad,Angry,Joyful,Cry,C
+Antonym of brave is,Bold,Coward,Strong,Hero,B
+He ___ playing football,is,are,am,be,A
+Correct spelling is,Beautifull,Beautifol,Beautiful,Beauteful,C
+Correct article for apple is,a,an,the,no article,B
+Past tense of go is,goed,go,went,going,C
+Opposite of ancient is,Old,Modern,Past,Antique,B
+Plural of child is,Childs,Children,Childes,Childrens,B
+Sentence expressing feeling is,Declarative,Interrogative,Exclamatory,Imperative,C
+He is ___ honest man,a,an,the,no,B
+Synonym of fast is,Slow,Quick,Late,Weak,B
+She ___ tea daily,drink,drinks,drank,drinking,B
+Noun is name of,Action,Place,Quality,All,D
+Correct sentence is,He go school,He goes school,He goes to school,He go to school,C
+Antonym of increase is,Rise,Grow,Decrease,Add,C
+Verb shows,Name,Action,Place,Thing,B
+Correct preposition afraid ___,from,of,with,by,B
+Adjective describes,Noun,Verb,Adverb,Pronoun,A
+Synonym of begin is,End,Start,Close,Stop,B
+Correct punctuation is,Hello how are you,Hello how are you?,Hello how are you.,Hello how, are you,B
